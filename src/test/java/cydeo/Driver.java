@@ -5,6 +5,7 @@ package cydeo;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -56,10 +57,10 @@ public class Driver {
                     //  obj = new ChromeDriver();  singleton
                     driverPool.set(new ChromeDriver());  // parallel
                     break;
-                case "firefox" :
-                    WebDriverManager.firefoxdriver().setup();
+                case "edge" :
+                    WebDriverManager.edgedriver().setup();
                     // obj = new FirefoxDriver();  singleton
-                    driverPool.set(new FirefoxDriver()); // parallel
+                    driverPool.set(new EdgeDriver()); // parallel
                     break;
                 // other browsers omitted
                 default:

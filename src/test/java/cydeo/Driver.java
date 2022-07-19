@@ -67,6 +67,8 @@ public class Driver {
                     driverPool.set(null);  // parallel
                     System.out.println("UNKNOWN BROWSER TYPE!!! " + browserName);
             }
+
+
             // return obj ; singleton
             return driverPool.get(); // parallel
 
